@@ -26,7 +26,7 @@
         "name": "Basic",
         "component": "BasicComponent",
         "exact": true,
-        "protected": true,
+        "protected": true
       },
       {
         "path": "/part-risk-manager/strategic-sourcing",
@@ -66,10 +66,18 @@
     ]
   },
   {
-    "path": "*",
-    "name": "NotFound",
-    "component": "NotFoundComponent",
-    "exact": false,
+    "path": "/supply-chain-watch",
+    "name": "Supply Chain Watch",
+    "component": "SupplyChainWatchComponent",
+    "exact": true,
+    "protected": false,
+    "subPaths": []
+  },
+  {
+    "path": "/supplier-insights",
+    "name": "Supplier Insights",
+    "component": "HomeComponent",
+    "exact": true,
     "protected": false,
     "subPaths": []
   }
