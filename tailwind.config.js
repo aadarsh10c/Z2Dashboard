@@ -24,12 +24,12 @@ module.exports = {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
+  				DEFAULT: 'hsl(var(--navy-blue-800))',
+  				foreground: 'hsl(var(--navy-blue-800))'
   			},
   			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
+  				DEFAULT: 'hsl(var(--white-500))',
+  				foreground: 'hsl(var(--white-400))'
   			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
