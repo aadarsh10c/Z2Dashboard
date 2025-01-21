@@ -3,7 +3,7 @@ import SideBar from './layout/SideBar'
 import Dashboard from './layout/Dashboard'
 function App() {
   return (
-    <main className="h-screen">
+    <main className="bg-primary h-screen">
       <Header />
       <SideBar/>      
       <Dashboard />
