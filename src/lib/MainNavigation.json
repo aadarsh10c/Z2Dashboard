@@ -1,0 +1,76 @@
+[
+  {
+    "path": "/",
+    "name": "Home",
+    "component": "HomeComponent",
+    "exact": true,
+    "protected": false,
+    "subPaths": []
+  },
+  {
+    "path": "/part-risk-manager",
+    "name": "Part Risk Manager",
+    "component": "PartRiskManagerComponent",
+    "exact": true,
+    "protected": true,
+    "subPaths": [
+      {
+        "path": "/part-risk-manager/my-data",
+        "name": "My Data",
+        "component": "MyDataComponent",
+        "exact": true,
+        "protected": true
+      },
+      {
+        "path": "/part-risk-manager/basic",
+        "name": "Basic",
+        "component": "BasicComponent",
+        "exact": true,
+        "protected": true,
+      },
+      {
+        "path": "/part-risk-manager/strategic-sourcing",
+        "name": "Strategic Sourcing",
+        "component": "StrategicSourcingComponent",
+        "exact": true,
+        "protected": true
+      },
+      {
+        "path": "/part-risk-manager/env-compliance",
+        "name": "Environment Compliance",
+        "component": "EnvComplianceComponent",
+        "exact": true,
+        "protected": true
+      },
+      {
+        "path": "/part-risk-manager/market",
+        "name": "Market",
+        "component": "MarketComponent",
+        "exact": true,
+        "protected": true
+      },
+      {
+        "path": "/part-risk-manager/one-risk",
+        "name": "One Risk",
+        "component": "OneRiskComponent",
+        "exact": true,
+        "protected": true
+      },
+      {
+        "path": "/part-risk-manager/alerts",
+        "name": "Alerts",
+        "component": "AlertsComponent",
+        "exact": true,
+        "protected": true
+      }
+    ]
+  },
+  {
+    "path": "*",
+    "name": "NotFound",
+    "component": "NotFoundComponent",
+    "exact": false,
+    "protected": false,
+    "subPaths": []
+  }
+]
