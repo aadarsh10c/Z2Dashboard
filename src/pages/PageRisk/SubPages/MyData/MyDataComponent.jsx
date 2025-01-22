@@ -32,9 +32,11 @@ function MyDataComponent() {
   }));
 
   return (
-    <div className="h-full flex">
+    <div className="h-full w-full flex">
       <StaticSidebar menuItems={menuItems} />
-      <MyDataTab />
+      <div className="flex-1 h-full overflow-hidden">
+        <MyDataTab />
+      </div>
     </div>
   );
 }
