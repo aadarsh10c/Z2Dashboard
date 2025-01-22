@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { StaticSidebar } from "@/util/StaticSidebar";
 import sidebarData from "@/lib/MyDataSidebarData.json";
-import { TabsDemo } from "./MyDataTab";
+import MyDataTab from "./MyDataTab";
 function MyDataComponent() {
   // Create icon mapping - moved outside component to avoid recreation on each render
   const iconComponents = {
@@ -34,7 +34,7 @@ function MyDataComponent() {
   return (
     <div className="h-full flex">
       <StaticSidebar menuItems={menuItems} />
-      <TabsDemo />
+      <MyDataTab />
     </div>
   );
 }
