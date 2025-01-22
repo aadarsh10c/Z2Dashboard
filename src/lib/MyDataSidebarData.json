@@ -1,0 +1,77 @@
+{
+  "menuItems": [
+    {
+      "title": "Sandbox",
+      "isHeader": true,
+      "subitems": [
+        {
+          "title": "Folders",
+          "iconName": "FileText",
+          "url": "/part-risk-manager/my-data/folders"
+        },
+        {
+          "title": "BOMs",
+          "iconName": "Box",
+          "url": "/part-risk-manager/my-data/boms"
+        },
+        {
+          "title": "Sandbox Master",
+          "iconName": "Database",
+          "url": "/part-risk-manager/my-data/sandbox-master"
+        },
+        {
+          "title": "Settings",
+          "iconName": "Settings",
+          "url": "/part-risk-manager/my-data/settings"
+        }
+      ]
+    },
+    {
+      "title": "PLM Vault",
+      "isHeader": true,
+      "subitems": [
+        {
+          "title": "Entire PLM Vault",
+          "iconName": "Database",
+          "url": "/plm/vault"
+        },
+        {
+          "title": "PLM Master",
+          "iconName": "LayoutList",
+          "url": "/plm/master"
+        },
+        {
+          "title": "Hierarchy",
+          "iconName": "Box",
+          "url": "/plm/hierarchy"
+        },
+        {
+          "title": "Suppliers",
+          "iconName": "Building2",
+          "url": "/plm/suppliers"
+        },
+        {
+          "title": "Settings",
+          "iconName": "Settings",
+          "url": "/plm/settings"
+        }
+      ]
+    },
+    {
+      "title": "Preferred",
+      "isHeader": true,
+      "subitems": [
+        {
+          "title": "Parts",
+          "iconName": "Box",
+          "url": "/preferred/parts"
+        },
+        {
+          "title": "Suppliers",
+          "iconName": "Users2",
+          "url": "/preferred/suppliers"
+        }
+      ]
+    }
+  ]
+}
