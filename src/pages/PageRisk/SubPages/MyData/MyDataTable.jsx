@@ -1,8 +1,10 @@
 import {
   flexRender,
   getCoreRowModel,
+  getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import { DataTablePagination } from "../../../../util/TablePagiantion";
 import PropTypes from "prop-types";
 
 import {
@@ -19,6 +21,7 @@ export function MyDataTable({ columns, data }) {
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
   });
 
   return (
@@ -65,6 +68,7 @@ export function MyDataTable({ columns, data }) {
           )}
         </TableBody>
       </Table>
+      <DataTablePagination table={table} />
     </div>
   );
 }
