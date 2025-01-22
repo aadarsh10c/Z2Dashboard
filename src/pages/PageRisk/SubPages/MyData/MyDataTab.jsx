@@ -31,10 +31,14 @@ export default function MyDataTab() {
             <MyDataTable columns={columns} data={MyDataTableData} />
           </TabsContent>
           <TabsContent value="myFolders" className="h-full p-4">
-            <h1>My Folders</h1>
+            <div className="h-full">
+              <h1>My Folders</h1>
+            </div>
           </TabsContent>
           <TabsContent value="favorites" className="h-full p-4">
-            <h1>Favorites</h1>
+            <div className="h-full">
+              <h1>Favorites</h1>
+            </div>
           </TabsContent>
         </main>
       </Tabs>
