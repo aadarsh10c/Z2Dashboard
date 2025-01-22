@@ -10,10 +10,10 @@ export default function PartRiskMain() {
   const paths = pathname.split("/").filter(Boolean);
 
   return (
-    <section className="bg-secondary rounded-l-md overflow-hidden p-2">
+    <section className="bg-secondary rounded-l-md p-2">
       <PageRiskHeader paths={paths} />
       <Separator />
-      <div className="flex-1 bg-secondary overflow-y-auto">
+      <div className="flex-1 bg-secondary">
         <Outlet />
       </div>
     </section>
