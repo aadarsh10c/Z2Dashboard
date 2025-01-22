@@ -47,87 +47,89 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
-      url: "#",
+      title: "Home",
+      url: "/",
       icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
+      items: [],
     },
     {
-      title: "Models",
-      url: "#",
+      title: "Part Risk Manager",
+      url: "/part-risk-manager",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "My Data",
+          url: "/part-risk-manager/my-data",
         },
         {
-          title: "Explorer",
-          url: "#",
+          title: "Basic",
+          url: "/part-risk-manager/basic",
         },
         {
-          title: "Quantum",
-          url: "#",
+          title: "Strategic Sourcing",
+          url: "/part-risk-manager/strategic-sourcing",
+        },
+        {
+          title: "Environmental Compliance",
+          url: "/part-risk-manager/environmental-compliance",
+        },
+        {
+          title: "Market",
+          url: "/part-risk-manager/market",
+        },
+        {
+          title: "One Risk",
+          url: "/part-risk-manager/one-risk",
+        },
+        {
+          title: "Alerts",
+          url: "/part-risk-manager/alerts",
         },
       ],
     },
     {
-      title: "Documentation",
-      url: "#",
+      title: "Supply Chain Watch",
+      url: "/supply-chain-watch",
       icon: BookOpen,
       items: [
         {
           title: "Introduction",
-          url: "#",
+          url: "/supply-chain-watch/introduction",
         },
         {
           title: "Get Started",
-          url: "#",
+          url: "/supply-chain-watch/get-started",
         },
         {
           title: "Tutorials",
-          url: "#",
+          url: "/supply-chain-watch/tutorials",
         },
         {
           title: "Changelog",
-          url: "#",
+          url: "/supply-chain-watch/changelog",
         },
       ],
     },
     {
-      title: "Settings",
-      url: "#",
+      title: "Supplier Insights",
+      url: "/supplier-insights",
       icon: Settings2,
       items: [
         {
           title: "General",
-          url: "#",
+          url: "/supplier-insights/general",
         },
         {
           title: "Team",
-          url: "#",
+          url: "/supplier-insights/team",
         },
         {
           title: "Billing",
-          url: "#",
+          url: "/supplier-insights/billing",
         },
         {
           title: "Limits",
-          url: "#",
+          url: "/supplier-insights/limits",
         },
       ],
     },
