@@ -4,7 +4,7 @@ import { Command, Search, ChevronDown } from "lucide-react";
 
 export default function DashboardHeader() {
   return (
-    <header className="flex justify-between items-center pr-2 p-2 w-full">
+    <header className="flex justify-between items-center pr-2 py-2 w-full">
       <div className="flex items-center gap-4 w-full">
         <div className="flex items-center gap-2 flex-1">
           <div className="flex items-center gap-2 bg-white/10 px-2 rounded-md max-w-[20rem] w-full h-8">
