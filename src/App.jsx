@@ -4,16 +4,14 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 // import SideBar from "./layout/SideBar";
 // import Dashboard from "./layout/Dashboard";
 import { MainSidebar } from "./layout/Sidebar/MainSidebar";
-
+import DashboardHeader from "./layout/DashboardHeader/DashboardHeader";
 function App() {
   return (
     <SidebarProvider>
       <MainSidebar />
       <main className="bg-primary h-screen w-screen">
-        {/* <SidebarTrigger className="hover:bg-primary-foreground hover:text-secondary" /> */}
-        {/* <Header />
-        <SideBar />
-        <Dashboard /> */}
+        <DashboardHeader/>
+        {/* <DashboardMainBody/> */}
       </main>
     </SidebarProvider>
   );

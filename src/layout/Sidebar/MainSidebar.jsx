@@ -18,7 +18,7 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarRail,
+  // SidebarRail,
 } from "@/components/ui/sidebar";
 import MainSidebarHeader from "./MainSidebarHeader";
 
@@ -154,7 +154,7 @@ const data = {
 
 export function MainSidebar({ ...props }) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar collapsible="icon" {...props} >
       <MainSidebarHeader />
       <SidebarContent className="text-secondary">
         <NavMain items={data.navMain} />
@@ -163,7 +163,7 @@ export function MainSidebar({ ...props }) {
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
-      <SidebarRail />
+      {/* <SidebarRail /> */}
     </Sidebar>
   );
 }
