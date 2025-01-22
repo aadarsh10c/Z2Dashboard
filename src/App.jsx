@@ -1,4 +1,4 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 // import Header from "./layout/Header";
 // import SideBar from "./layout/SideBar";
@@ -10,7 +10,7 @@ function App() {
     <SidebarProvider>
       <MainSidebar />
       <main className="bg-primary h-screen w-screen">
-        <SidebarTrigger className="hover:bg-primary-foreground hover:text-secondary" />
+        {/* <SidebarTrigger className="hover:bg-primary-foreground hover:text-secondary" /> */}
         {/* <Header />
         <SideBar />
         <Dashboard /> */}
