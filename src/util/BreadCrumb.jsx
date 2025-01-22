@@ -17,19 +17,16 @@ export function BreadcrumbWithCustomSeparator({ crumbList }) {
           <>
             <BreadcrumbItem key={index}>
               {index === crumbList.length - 1 ? (
-                <BreadcrumbPage>{crumb}</BreadcrumbPage>
+                <BreadcrumbPage>{formatCrumb(crumb)}</BreadcrumbPage>
               ) : (
-                <BreadcrumbLink
-                  href="#"
-                  disabled
-                >
-                  {crumb}
+                <BreadcrumbLink href="#" disabled>
+                  {formatCrumb(crumb)}
                 </BreadcrumbLink>
               )}
             </BreadcrumbItem>
             {index < crumbList.length - 1 && (
               <BreadcrumbSeparator>
-                <Slash />
+                <Slash size={1} />
               </BreadcrumbSeparator>
             )}
           </>
@@ -37,6 +34,13 @@ export function BreadcrumbWithCustomSeparator({ crumbList }) {
       </BreadcrumbList>
     </Breadcrumb>
   );
+}
+
+function formatCrumb(crumb) {
+  return crumb
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 BreadcrumbWithCustomSeparator.propTypes = {

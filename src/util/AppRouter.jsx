@@ -6,7 +6,7 @@ import routeConfig from "../lib/MainNavigation.json"
 const componentsMap = {
   HomeComponent: lazy(() => import("../pages/HomeComponent")),
   PartRiskManagerComponent: lazy(() => import("../pages/PageRisk/PartRiskMain")),
-  MyDataComponent: lazy(() => import("../pages/PageRisk/SubPages/MyDataComponent")),
+  MyDataComponent: lazy(() => import("../pages/PageRisk/SubPages/MyData/MyDataComponent")),
   // BasicComponent: lazy(() => import("../pages/BasicComponent")),
   // StrategicSourcingComponent: lazy(() => import("../pages/StrategicSourcingComponent")),
   // EnvComplianceComponent: lazy(() => import("../pages/EnvComplianceComponent")),
