@@ -18,7 +18,6 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  // SidebarRail,
 } from "@/components/ui/sidebar";
 import MainSidebarHeader from "./MainSidebarHeader";
 
@@ -163,7 +162,6 @@ export function MainSidebar({ ...props }) {
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
-      {/* <SidebarRail /> */}
     </Sidebar>
   );
 }

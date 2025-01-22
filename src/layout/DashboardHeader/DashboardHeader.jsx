@@ -7,25 +7,25 @@ export default function DashboardHeader() {
     <header className="flex justify-between items-center pr-2 py-2 w-full">
       <div className="flex items-center gap-4 w-full">
         <div className="flex items-center gap-2 flex-1">
-          <div className="flex items-center gap-2 bg-white/10 px-2 rounded-md max-w-[20rem] w-full h-8">
+          <div className="flex items-center gap-2 bg-primary-foreground px-2 rounded-md max-w-[20rem] w-full h-8">
             <Search className="w-6 h-4 text-gray-400" />
             <input
               type="text"
               placeholder="Search anything..."
-              className="bg-transparent border-none outline-none text-[hsl(var(--white-400))] caret-[hsl(var(--white-400))] w-full h-full text-sm"
+              className="bg-transparent border-none outline-none text-secondary-foreground caret-secondary-foreground w-full h-full text-sm"
             />
-            <div className="flex items-center gap-0.5 px-1 py-0.5 bg-white/10 rounded text-xs text-[hsl(var(--white-400))]">
+            <div className="flex items-center gap-0.5 px-1 py-0.5 bg-primary-foreground rounded text-xs text-[hsl(var(--white-400))]">
               <Command className="w-3 h-3" />
               <span className="text-xs">S</span>
             </div>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <Button className="w-8 h-8">
-            <span className="mb-[0.3rem] font-bold">...</span>
+          <Button className="w-8 h-8 bg-primary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-primary">
+            <span className="mb-[0.3rem] font-extrabold">...</span>
           </Button>
-          <Button className="h-8 px-1.5">
-            <span className="">🔼</span>
+          <Button className="h-8 px-1.5 bg-primary-foreground text-secondary-foreground rounded-md hover:bg-secondary-foreground hover:text-primary">
+            <span>🔼</span>
             <span>Submit Ticket</span>
           </Button>
           <div className="h-8 flex items-center gap-1 border border-[hsl(var(--navy-blue-600))] rounded-2xl p-1 text-[hsl(var(--white-500))] text-sm">
