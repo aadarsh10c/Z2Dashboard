@@ -1,257 +1,300 @@
 [
   {
+    "id": "DOC001",
     "name": "Q4 Reports 2024",
     "createdBy": "alimamedgasanov3@gmail.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC002",
     "name": "Project Alpha Documentation",
     "createdBy": "sarah.chen892@outlook.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC003",
     "name": "Client Meeting Notes",
     "createdBy": "dev.patel2024@gmail.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC004",
     "name": "BOM_Analysis_Dec2023",
     "createdBy": "m.rodriguez_work@yahoo.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC005",
     "name": "Supply Chain Data",
     "createdBy": "alex.k.thompson@protonmail.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC006",
     "name": "Market Research",
     "createdBy": "jsmith_1984@hotmail.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC007",
     "name": "Component List v2",
     "createdBy": "emma.wilson.design@gmail.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC008",
     "name": "Risk Assessment",
     "createdBy": "tech.ninja42@outlook.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC009",
     "name": "Vendor Analysis Q1",
     "createdBy": "robert.brown.nyc@gmail.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC010",
     "name": "Technical Specs",
     "createdBy": "lisa.zhang1990@yahoo.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC011",
     "name": "Product Roadmap 2024",
     "createdBy": "k.anderson.dev@gmail.com",
     "modified": "Dec 25, 2024",
     "created": "Dec 25, 2024"
   },
   {
+    "id": "DOC012",
     "name": "Manufacturing Process Review",
     "createdBy": "david.miller@company.com",
     "modified": "Dec 24, 2024",
     "created": "Dec 20, 2024"
   },
   {
+    "id": "DOC013",
     "name": "Supplier Evaluation Q4",
     "createdBy": "procurement.team@company.com",
     "modified": "Dec 23, 2024",
     "created": "Dec 15, 2024"
   },
   {
+    "id": "DOC014",
     "name": "Quality Control Standards",
     "createdBy": "qc.supervisor@company.com",
     "modified": "Dec 22, 2024",
     "created": "Nov 30, 2024"
   },
   {
+    "id": "DOC015",
     "name": "Inventory Analysis 2024",
     "createdBy": "inventory.manager@company.com",
     "modified": "Dec 21, 2024",
     "created": "Dec 10, 2024"
   },
   {
+    "id": "DOC016",
     "name": "Production Schedule Jan 2025",
     "createdBy": "production.planner@company.com",
     "modified": "Dec 24, 2024",
     "created": "Dec 20, 2024"
   },
   {
+    "id": "DOC017",
     "name": "Equipment Maintenance Log",
     "createdBy": "maintenance.team@company.com",
     "modified": "Dec 23, 2024",
     "created": "Dec 1, 2024"
   },
   {
+    "id": "DOC018",
     "name": "Safety Protocols Update",
     "createdBy": "safety.officer@company.com",
     "modified": "Dec 22, 2024",
     "created": "Dec 15, 2024"
   },
   {
+    "id": "DOC019",
     "name": "Employee Training Records",
     "createdBy": "hr.training@company.com",
     "modified": "Dec 21, 2024",
     "created": "Dec 1, 2024"
   },
   {
+    "id": "DOC020",
     "name": "Budget Forecast 2025",
     "createdBy": "finance.analyst@company.com",
     "modified": "Dec 24, 2024",
     "created": "Dec 20, 2024"
   },
   {
+    "id": "DOC021",
     "name": "Customer Feedback Analysis",
     "createdBy": "customer.service@company.com",
     "modified": "Dec 23, 2024",
     "created": "Dec 15, 2024"
   },
   {
+    "id": "DOC022",
     "name": "Marketing Campaign Results",
     "createdBy": "marketing.team@company.com",
     "modified": "Dec 22, 2024",
     "created": "Dec 10, 2024"
   },
   {
+    "id": "DOC023",
     "name": "Sales Pipeline Q1 2025",
     "createdBy": "sales.manager@company.com",
     "modified": "Dec 24, 2024",
     "created": "Dec 20, 2024"
   },
   {
+    "id": "DOC024",
     "name": "IT Infrastructure Review",
     "createdBy": "it.admin@company.com",
     "modified": "Dec 23, 2024",
     "created": "Dec 15, 2024"
   },
   {
+    "id": "DOC025",
     "name": "Compliance Report 2024",
     "createdBy": "compliance.officer@company.com",
     "modified": "Dec 22, 2024",
     "created": "Dec 1, 2024"
   },
   {
+    "id": "DOC026",
     "name": "Project Beta Specifications",
     "createdBy": "project.manager@company.com",
     "modified": "Dec 21, 2024",
     "created": "Dec 10, 2024"
   },
   {
+    "id": "DOC027",
     "name": "Research & Development Plans",
     "createdBy": "rd.director@company.com",
     "modified": "Dec 24, 2024",
     "created": "Dec 20, 2024"
   },
   {
+    "id": "DOC028",
     "name": "Quality Metrics Dashboard",
     "createdBy": "quality.analyst@company.com",
     "modified": "Dec 23, 2024",
     "created": "Dec 15, 2024"
   },
   {
+    "id": "DOC029",
     "name": "Vendor Contract Reviews",
     "createdBy": "legal.team@company.com",
     "modified": "Dec 22, 2024",
     "created": "Dec 1, 2024"
   },
   {
+    "id": "DOC030",
     "name": "Environmental Impact Study",
     "createdBy": "sustainability@company.com",
     "modified": "Dec 21, 2024",
     "created": "Dec 10, 2024"
   },
   {
+    "id": "DOC031",
     "name": "Supply Chain Optimization",
     "createdBy": "logistics.manager@company.com",
     "modified": "Dec 24, 2024",
     "created": "Dec 20, 2024"
   },
   {
+    "id": "DOC032",
     "name": "Product Launch Strategy",
     "createdBy": "product.manager@company.com",
     "modified": "Dec 23, 2024",
     "created": "Dec 15, 2024"
   },
   {
+    "id": "DOC033",
     "name": "Customer Success Stories",
     "createdBy": "marketing.content@company.com",
     "modified": "Dec 22, 2024",
     "created": "Dec 1, 2024"
   },
   {
+    "id": "DOC034",
     "name": "Employee Engagement Survey",
     "createdBy": "hr.manager@company.com",
     "modified": "Dec 21, 2024",
     "created": "Dec 10, 2024"
   },
   {
+    "id": "DOC035",
     "name": "Digital Transformation Plan",
     "createdBy": "digital.strategy@company.com",
     "modified": "Dec 24, 2024",
     "created": "Dec 20, 2024"
   },
   {
+    "id": "DOC036",
     "name": "Risk Management Framework",
     "createdBy": "risk.analyst@company.com",
     "modified": "Dec 23, 2024",
     "created": "Dec 15, 2024"
   },
   {
+    "id": "DOC037",
     "name": "Innovation Workshop Results",
     "createdBy": "innovation.lead@company.com",
     "modified": "Dec 22, 2024",
     "created": "Dec 1, 2024"
   },
   {
+    "id": "DOC038",
     "name": "Global Market Analysis",
     "createdBy": "market.research@company.com",
     "modified": "Dec 21, 2024",
     "created": "Dec 10, 2024"
   },
   {
+    "id": "DOC039",
     "name": "Cybersecurity Assessment",
     "createdBy": "security.team@company.com",
     "modified": "Dec 24, 2024",
     "created": "Dec 20, 2024"
   },
   {
+    "id": "DOC040",
     "name": "Operational Excellence Report",
     "createdBy": "operations.director@company.com",
     "modified": "Dec 23, 2024",
     "created": "Dec 15, 2024"
   },
   {
+    "id": "DOC041",
     "name": "Talent Acquisition Strategy",
     "createdBy": "recruitment@company.com",
     "modified": "Dec 22, 2024",
     "created": "Dec 1, 2024"
   },
   {
+    "id": "DOC042",
     "name": "Business Continuity Plan",
     "createdBy": "business.continuity@company.com",
     "modified": "Dec 21, 2024",
     "created": "Dec 10, 2024"
   },
   {
+    "id": "DOC043",
     "name": "Technology Stack Review",
     "createdBy": "tech.architect@company.com",
     "modified": "Dec 24, 2024",
