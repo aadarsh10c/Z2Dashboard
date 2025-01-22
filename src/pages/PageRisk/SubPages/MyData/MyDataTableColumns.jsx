@@ -1,7 +1,6 @@
 import { FolderClosed } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { MoreHorizontal } from "lucide-react";
-
+import { MoreHorizontal, ChevronsUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -15,7 +14,17 @@ import {
 export const columns = [
   {
     accessorKey: "name",
-    header: "Name",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Name
+          <ChevronsUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
     cell: ({ row }) => {
       const name = row.getValue("name");
       return (
@@ -52,7 +61,7 @@ export const columns = [
   },
   {
     accessorKey: "...",
-    header: <MoreHorizontal className="h-4 w-4" />,
+    header: () => <MoreHorizontal className="h-4 w-4" />,
     cell: () => {
       return (
         <DropdownMenu>
@@ -73,5 +82,4 @@ export const columns = [
       );
     },
   },
-    
 ];
