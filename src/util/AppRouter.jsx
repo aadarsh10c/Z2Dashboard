@@ -5,8 +5,8 @@ import routeConfig from "../lib/MainNavigation.json"
 // Lazy load components
 const componentsMap = {
   HomeComponent: lazy(() => import("../pages/HomeComponent")),
-  PartRiskManagerComponent: lazy(() => import("../pages/PartRiskManagerComponent")),
-  MyDataComponent: lazy(() => import("../pages/MyDataComponent")),
+  PartRiskManagerComponent: lazy(() => import("../pages/PageRisk/PartRiskMain")),
+  MyDataComponent: lazy(() => import("../pages/PageRisk/SubPages/MyDataComponent")),
   // BasicComponent: lazy(() => import("../pages/BasicComponent")),
   // StrategicSourcingComponent: lazy(() => import("../pages/StrategicSourcingComponent")),
   // EnvComplianceComponent: lazy(() => import("../pages/EnvComplianceComponent")),
