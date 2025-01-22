@@ -36,8 +36,8 @@
     --white-500: 0 0% 100%;
     --white-400: 180 8% 95%;
     /* Sidebar variables  */
-    --sidebar-background: var(--navy-blue-800);
-    --sidebar-foreground: var(--navy-blue-600);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
@@ -94,5 +94,13 @@
   }
   body {
     @apply bg-background text-secondary;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
