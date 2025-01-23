@@ -30,7 +30,7 @@ export const columns = [
         size={8}
         className="data-[state=checked]:bg-secondary-foreground"
         checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
+        onCheckedChange={() => row.toggleSelected()}
         aria-label="Select row"
       />
     ),

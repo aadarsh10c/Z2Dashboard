@@ -116,6 +116,7 @@ export function MyDataTable({ columns, data }) {
     () => ({
       data,
       columns,
+      enableRowSelection: true,
       getCoreRowModel: getCoreRowModel(),
       getPaginationRowModel: getPaginationRowModel(),
       onSortingChange: setSorting,
