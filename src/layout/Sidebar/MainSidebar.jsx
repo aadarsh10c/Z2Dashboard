@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 import NavMain from "./NavMain";
-import NavProjects from "./NavProjects";
+import NavContent from "./NavContent";
 import NavUser from "./NavUser";
 import {
   Sidebar,
@@ -136,42 +136,50 @@ const data = {
   ],
   projects: [
     {
-      name: "Design Engineering",
+      name: "Reporting & Dashboards",
       url: "#",
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
+      name: "Events & Alerts",
       url: "#",
       icon: PieChart,
     },
+  ],
+  applications: [
     {
-      name: "Travel",
+      name: "Supplier Management",
       url: "#",
       icon: Map,
+    },
+    {
+      name: "PCN Manager",
+      url: "#",
+      icon: Frame,
     },
   ],
 };
 
 /**
  * MainSidebar Component
- * 
+ *
  * Primary navigation sidebar for the application that displays:
  * - Main navigation menu items with nested routes
  * - Project shortcuts
  * - User profile information
- * 
+ *
  * The sidebar is collapsible and supports an icon-only view for better space utilization.
  * Data is currently hardcoded.
  */
 
 export function MainSidebar({ ...props }) {
   return (
-    <Sidebar collapsible="icon" {...props} >
+    <Sidebar collapsible="icon" {...props}>
       <MainSidebarHeader />
       <SidebarContent className="text-secondary">
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavContent name="Projects" itemList={data.projects} />
+        <NavContent name="Applications" itemList={data.applications} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
