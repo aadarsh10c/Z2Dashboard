@@ -153,6 +153,18 @@ const data = {
   ],
 };
 
+/**
+ * MainSidebar Component
+ * 
+ * Primary navigation sidebar for the application that displays:
+ * - Main navigation menu items with nested routes
+ * - Project shortcuts
+ * - User profile information
+ * 
+ * The sidebar is collapsible and supports an icon-only view for better space utilization.
+ * Data is currently hardcoded.
+ */
+
 export function MainSidebar({ ...props }) {
   return (
     <Sidebar collapsible="icon" {...props} >

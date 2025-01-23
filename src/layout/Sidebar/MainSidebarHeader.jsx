@@ -3,6 +3,13 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
+import {Z2Logo} from "@/assets/z2_logo.jpg";
+/**
+ * MainSidebarHeader Component
+ * 
+ * This component provides a header for the main sidebar, including a logo and a toggle button.
+ * It also handles the sidebar state and provides a function to toggle the sidebar.
+ */
 
 export default function MainSidebarHeader() {
   const { open, setOpen } = useSidebar();
@@ -21,7 +28,7 @@ export default function MainSidebarHeader() {
     <SidebarHeader>
       <div className="flex items-center justify-between gap-2">
         <img
-          src="./src/assets/z2_logo.jpg"
+          src={Z2Logo}
           alt="Z2Data Logo"
           width={25}
           height={25}

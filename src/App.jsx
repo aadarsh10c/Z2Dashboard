@@ -2,6 +2,12 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { MainSidebar } from "./layout/Sidebar/MainSidebar";
 import DashboardHeader from "./layout/DashboardHeader/DashboardHeader";
 import DashboardMainBody from "./layout/DashboardMainBody/DashboardMainBody";
+
+/**
+ * App Component - Main Entry Point
+ * This is the root component of the application that sets up the basic layout structure
+ * including the main sidebar, main header, and main content area.
+ */
 function App() {
   return (
     <SidebarProvider>

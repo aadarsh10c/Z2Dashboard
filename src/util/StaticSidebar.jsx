@@ -14,7 +14,7 @@ export function StaticSidebar({ menuItems, className = "" }) {
             {item.subitems?.map((subitem) => (
               <a
                 key={subitem.title}
-                href={subitem.url}
+                href="#"
                 className="flex items-center px-1.5 py-1 gap-2 mb-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors"
               >
                 {subitem.icon && <subitem.icon className="w-3.5 h-3.5" />}
