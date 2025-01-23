@@ -11,7 +11,7 @@ const tabsConfig = [
   { id: "favorites", label: "Favorites" },
 ];
 
-// Common styles extracted to avoid repetition
+// Common tab styles extracted
 const commonTabStyles =
   "relative text-xs py-2 px-4 font-medium transition-all rounded-none " +
   "data-[state=active]:text-blue-600 bg-secondary shadow-none " +
@@ -40,7 +40,7 @@ export default function MyDataTab() {
           <Separator />
         </header>
 
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1">
           {tabsConfig.map((tab) => (
             <TabsContent
               key={tab.id}

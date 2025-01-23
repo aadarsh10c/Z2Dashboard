@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { DataTablePagination } from "../../../../util/TablePagiantion";
 import PropTypes from "prop-types";
-import { User , ChevronDown, Calendar, Search} from "lucide-react";
+import { User, ChevronDown, Calendar, Search } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -68,7 +68,7 @@ export function MyDataTable({ columns, data }) {
           </span>
         </Button>
       </div>
-      <div className="rounded-md border">
+      <div className="rounded-md border flex flex-col">
         <Table>
           <TableHeader className="bg-secondary-foreground">
             {table.getHeaderGroups().map((headerGroup) => (
@@ -88,35 +88,39 @@ export function MyDataTable({ columns, data }) {
               </TableRow>
             ))}
           </TableHeader>
-          <TableBody>
-            {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))
-            ) : (
-              <TableRow>
-                <TableCell
-                  colSpan={columns.length}
-                  className="h-24 text-center"
-                >
-                  No results.
-                </TableCell>
-              </TableRow>
-            )}
-          </TableBody>
         </Table>
+        <div className="max-h-[500px] overflow-y-auto">
+          <Table>
+            <TableBody>
+              {table.getRowModel().rows?.length ? (
+                table.getRowModel().rows.map((row) => (
+                  <TableRow
+                    key={row.id}
+                    data-state={row.getIsSelected() && "selected"}
+                  >
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))
+              ) : (
+                <TableRow>
+                  <TableCell
+                    colSpan={columns.length}
+                    className="h-24 text-center"
+                  >
+                    No results.
+                  </TableCell>
+                </TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </div>
         <DataTablePagination table={table} />
       </div>
     </div>
