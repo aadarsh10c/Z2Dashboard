@@ -1,6 +1,50 @@
-# Z2 Frontend Dashboard
+# Z2 Frontend Dashboard - Technical Assessment
 
-A high-performance, responsive dashboard application built with React, Vite, and Tailwind CSS, featuring optimized data handling and consistent theming.
+A technical assessment implementation of Z2's dashboard design, built to demonstrate frontend development expertise using React and modern web technologies.
+
+## 🎯 Assessment Objectives
+
+This implementation focuses on demonstrating:
+
+- **Clean, Readable Code**
+
+  - Well-structured components
+  - Clear naming conventions
+  - Consistent formatting
+  - Comprehensive documentation
+
+- **Best Practices**
+
+  - Modern React patterns
+  - Proper state management
+  - Error handling
+  - Accessibility compliance
+
+- **Code Conventions**
+
+  - ESLint configuration
+  - Consistent styling approach
+  - Project structure
+
+- **Reusability**
+
+  - Component modularity
+  - Custom hooks
+  - Utility functions
+  - Shared logic
+
+- **Performance Optimization**
+
+  - Code splitting
+  - Image optimization
+  - Lazy loading
+  - Bundle size management
+
+- **React Concepts**
+
+  - Component composition
+  - State and props management
+  - React hooks implementation
 
 ## 🚀 Key Features
 
@@ -24,37 +68,35 @@ A high-performance, responsive dashboard application built with React, Vite, and
   - shadcn/ui components integration
   - Consistent spacing and color variables
 
-- **Responsive Design**
-  - Mobile-first approach
-  - Adaptive layouts for different screen sizes
-  - Optimized for both desktop and mobile experiences
 
 ## 🛠️ Technology Stack
 
 - **Core**
 
   - React 18
-  - Vite
-  - React Router DOM
-  - TypeScript
-
-- **Styling**
-
+  - JavaScript
   - Tailwind CSS
-  - shadcn/ui
-  - Custom theming system
 
-- **Performance**
-  - Dynamic imports
-  - React Suspense
-  - Lazy loading
+- **UI Components**
+
+  - shadcn/ui
+  - Custom components
+  - Responsive layouts
+
+- **Development Tools**
+  - ESLint
+  - Prettier
+  - Husky
+  - Jest
 
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/aadarsh010c/z2-frontend-dashboard.git
+git clone https://github.com/aadarsh10c/Z2Dashboard.git
 ```
+
 2. Install dependencies:
 
 ```bash
@@ -103,14 +145,4 @@ npm run preview
 yarn preview
 # or
 pnpm preview
-```
-
-## 🧪 Running Tests
-
-```bash
-npm run test
-# or
-yarn test
-# or
-pnpm test
 ```
