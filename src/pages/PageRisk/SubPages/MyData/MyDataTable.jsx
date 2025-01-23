@@ -1,4 +1,38 @@
-import { useState } from "react";
+/**
+ * MyDataTable Component - Optimized for Large Dataset Rendering
+ *
+ * Performance Optimizations:
+ *
+ * 1. Memoized Components:
+ *    - SearchInput, FilterButtons, and TableRowMemo are wrapped with memo()
+ *    - Prevents unnecessary re-renders when parent component updates
+ *    - Especially important for TableRowMemo as it's rendered for each row
+ *
+ * 2. Table Configuration Memoization:
+ *    - tableConfig object is memoized using useMemo
+ *    - Only recalculates when data, columns, sorting, or filters change
+ *    - Prevents expensive table reconfiguration on every render
+ *    const tableConfig = useMemo(() => ({...}), [data, columns, sorting, columnFilters]);
+ *
+ *
+ * 3. Pagination Implementation:
+ *    - Built-in pagination reduces the number of rendered rows
+ *    - Essential for handling large datasets efficiently
+ *
+ * 4. Component Structure:
+ *    - Logical separation of components (SearchInput, FilterButtons, TableRowMemo)
+ *    - Improves maintainability and allows for granular rendering optimization
+ *
+ * When to use these optimizations:
+ * - Large datasets (hundreds of rows)
+ * - Complex table interactions (sorting, filtering, pagination)
+ * - When performance monitoring shows rendering bottlenecks
+ *
+ * Note: These optimizations might be unnecessary for small datasets
+ * and could add unnecessary complexity in such cases.
+ */
+
+import { useState, memo, useMemo } from "react";
 import {
   flexRender,
   getCoreRowModel,
@@ -20,7 +54,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const SearchInput = () => (
+const SearchInput = memo(() => (
   <div className="flex items-center gap-2 border-2 bg-secondary px-2 rounded-md max-w-[20rem] w-full h-8">
     <Search className="w-6 h-4 text-primary-foreground" />
     <input
@@ -29,40 +63,73 @@ const SearchInput = () => (
       className="bg-transparent border-none outline-none caret-primary-foreground w-full h-full text-sm"
     />
   </div>
-);
+));
+
+SearchInput.displayName = "SearchInput";
+
+const TableRowMemo = memo(({ row }) => (
+  <TableRow data-state={row.getIsSelected() && "selected"}>
+    {row.getVisibleCells().map((cell) => (
+      <TableCell key={cell.id}>
+        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+      </TableCell>
+    ))}
+  </TableRow>
+));
+
+TableRowMemo.displayName = "TableRowMemo";
+TableRowMemo.propTypes = {
+  row: PropTypes.object.isRequired,
+};
+
+const FilterButtons = memo(() => (
+  <>
+    {[
+      { icon: User, text: "Created By" },
+      { icon: Calendar, text: "Creation Date" },
+    ].map(({ icon: Icon, text }) => (
+      <Button key={text} variant="outline" className="text-xs px-1.5">
+        <Icon />
+        <span>{text}</span>
+        <ChevronDown />
+      </Button>
+    ))}
+  </>
+));
+
+FilterButtons.displayName = "FilterButtons";
 
 export function MyDataTable({ columns, data }) {
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
-  const table = useReactTable({
-    data,
-    columns,
-    getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    onSortingChange: setSorting,
-    getSortedRowModel: getSortedRowModel(),
-    onColumnFiltersChange: setColumnFilters,
-    getFilteredRowModel: getFilteredRowModel(),
-    state: {
-      sorting,
-      columnFilters,
-    },
-  });
+
+  // Memoize the table configuration options
+  const tableConfig = useMemo(
+    () => ({
+      data,
+      columns,
+      getCoreRowModel: getCoreRowModel(),
+      getPaginationRowModel: getPaginationRowModel(),
+      onSortingChange: setSorting,
+      getSortedRowModel: getSortedRowModel(),
+      onColumnFiltersChange: setColumnFilters,
+      getFilteredRowModel: getFilteredRowModel(),
+      state: {
+        sorting,
+        columnFilters,
+      },
+    }),
+    [data, columns, sorting, columnFilters]
+  );
+
+  // Create table instance
+  const table = useReactTable(tableConfig);
 
   return (
     <div className="flex flex-col items-between justify-center gap-2">
       <div className="flex items-center justify-start gap-2">
         <SearchInput />
-        {[
-          { icon: User, text: "Created By" },
-          { icon: Calendar, text: "Creation Date" },
-        ].map(({ icon: Icon, text }) => (
-          <Button key={text} variant="outline" className="text-xs px-1.5">
-            <Icon />
-            <span>{text}</span>
-            <ChevronDown />
-          </Button>
-        ))}
+        <FilterButtons />
       </div>
       <div className="rounded-md border flex flex-col h-[calc(100vh-12rem)]">
         <Table className="relative">
@@ -83,21 +150,9 @@ export function MyDataTable({ columns, data }) {
           </TableHeader>
           <TableBody className="overflow-y-auto">
             {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))
+              table
+                .getRowModel()
+                .rows.map((row) => <TableRowMemo key={row.id} row={row} />)
             ) : (
               <TableRow>
                 <TableCell
