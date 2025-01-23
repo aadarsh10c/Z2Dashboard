@@ -24,7 +24,7 @@ import MainSidebarHeader from "./MainSidebarHeader";
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
+    name: "adarsh",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
