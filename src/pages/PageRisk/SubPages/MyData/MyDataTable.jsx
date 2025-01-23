@@ -75,7 +75,14 @@ SearchInput.propTypes = {
 // Memoized table row component for performance optimization
 // Renders a single row with its cells based on the provided row data
 const TableRowMemo = memo(({ row }) => (
-  <TableRow data-state={row.getIsSelected() && "selected"}>
+  <TableRow
+    data-state={row.getIsSelected() ? "selected" : undefined}
+    className={`transition-colors ${
+      row.getIsSelected()
+        ? "bg-muted/50 data-[state=selected]:bg-muted"
+        : "hover:bg-muted/50"
+    }`}
+  >
     {row.getVisibleCells().map((cell) => (
       <TableCell key={cell.id}>
         {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -110,32 +117,36 @@ FilterButtons.displayName = "FilterButtons";
 
 // Main table component that handles data display, sorting, filtering, and pagination
 export function MyDataTable({ columns, data }) {
+  // Add rowSelection state
+  const [rowSelection, setRowSelection] = useState({});
   // State for sorting and filtering
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
   // Add globalFilter state
   const [globalFilter, setGlobalFilter] = useState("");
 
-  // Memoize table configuration to prevent unnecessary recalculations
+  // Update tableConfig to include row selection
   const tableConfig = useMemo(
     () => ({
       data,
       columns,
       enableRowSelection: true,
+      state: {
+        sorting,
+        columnFilters,
+        globalFilter,
+        rowSelection,
+      },
+      onRowSelectionChange: setRowSelection,
       getCoreRowModel: getCoreRowModel(),
       getPaginationRowModel: getPaginationRowModel(),
       onSortingChange: setSorting,
       getSortedRowModel: getSortedRowModel(),
       onColumnFiltersChange: setColumnFilters,
       getFilteredRowModel: getFilteredRowModel(),
-      state: {
-        sorting,
-        columnFilters,
-        globalFilter,
-      },
       onGlobalFilterChange: setGlobalFilter,
     }),
-    [data, columns, sorting, columnFilters, globalFilter]
+    [data, columns, sorting, columnFilters, globalFilter, rowSelection]
   );
 
   // Create table instance
