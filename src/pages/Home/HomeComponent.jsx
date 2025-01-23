@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 function HomeComponent() {
   return (
-    <div className="h-screen flex flex-col justify-center items-center p-8 bg-gray-100 text-center">
+    <div className="h-screen flex flex-1 flex-col justify-center items-center p-8 bg-gray-100 text-center">
       <h1 className="mb-6 text-3xl font-bold text-gray-800">
         Welcome to the Demo
       </h1>
