@@ -27,8 +27,12 @@ export default function MyDataTab() {
           <Separator />
         </header>
         <main className="flex-1 h-full">
-          <TabsContent value="allFolders" className="h-full p-4">
-            <MyDataTable columns={columns} data={MyDataTableData} />
+          <TabsContent value="allFolders" className="h-full">
+            <MyDataTable
+              columns={columns}
+              data={MyDataTableData}
+              className="h-8/10 overflow-y-auto"
+            />
           </TabsContent>
           <TabsContent value="myFolders" className="h-full p-4">
             <div className="h-full">

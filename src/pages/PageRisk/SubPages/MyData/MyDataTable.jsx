@@ -7,10 +7,10 @@ import {
   useReactTable,
   getSortedRowModel,
 } from "@tanstack/react-table";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { DataTablePagination } from "../../../../util/TablePagiantion";
 import PropTypes from "prop-types";
-
+import { User , ChevronDown, Calendar, Search} from "lucide-react";
 import {
   Table,
   TableBody,
@@ -39,16 +39,34 @@ export function MyDataTable({ columns, data }) {
   });
 
   return (
-    <div>
-      <div className="flex items-center">
-        <Input
-          placeholder="Search by folder name..."
-          value={table.getColumn("name")?.getFilterValue() ?? ""}
-          onChange={(event) =>
-            table.getColumn("name")?.setFilterValue(event.target.value)
-          }
-          className="max-w-xs h-6"
-        />
+    <div className="flex flex-col items-between justify-center gap-2">
+      <div className="flex items-center justify-start gap-2">
+        <div className="flex items-center gap-2 border-2 bg-secondary px-2 rounded-md max-w-[20rem] w-full h-8">
+          <Search className="w-6 h-4 text-primary-foreground" />
+          <input
+            type="text"
+            placeholder="Search anything..."
+            className="bg-transparent border-none outline-none  caret-primary-foreground w-full h-full text-sm"
+          />
+        </div>
+        <Button variant="outline" className="text-xs px-1.5">
+          <span>
+            <User />
+          </span>
+          <span>Created By</span>
+          <span>
+            <ChevronDown />
+          </span>
+        </Button>
+        <Button variant="outline" className="text-xs px-1.5">
+          <span>
+            <Calendar />
+          </span>
+          <span>Creation Date</span>
+          <span>
+            <ChevronDown />
+          </span>
+        </Button>
       </div>
       <div className="rounded-md border">
         <Table>
