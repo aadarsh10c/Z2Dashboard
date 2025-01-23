@@ -34,12 +34,12 @@ export default function MyDataTab() {
               className="h-full"
             />
           </TabsContent>
-          <TabsContent value="myFolders" className="h-full p-4">
+          <TabsContent value="myFolders" className="min-h-screen p-4">
             <div className="h-full">
               <h1>My Folders</h1>
             </div>
           </TabsContent>
-          <TabsContent value="favorites" className="h-full p-4">
+          <TabsContent value="favorites" className="min-h-screen p-4">
             <div className="h-full">
               <h1>Favorites</h1>
             </div>
