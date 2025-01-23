@@ -10,7 +10,7 @@ export default function MyDataTab() {
   return (
     <section className="h-full flex-1 flex flex-col">
       <Tabs defaultValue="allFolders" className="h-full flex flex-col">
-        <header className="flex-none">
+        <header className="flex-none sticky top-0 bg-white z-10">
           <nav>
             <TabsList className="inline-flex h-9 items-center justify-start w-auto bg-secondary border-b">
               <TabsTrigger value="allFolders" className={commonTabStyles}>
@@ -26,12 +26,12 @@ export default function MyDataTab() {
           </nav>
           <Separator />
         </header>
-        <main className="flex-1 h-full">
+        <main className="flex-1 overflow-y-auto">
           <TabsContent value="allFolders" className="h-full">
             <MyDataTable
               columns={columns}
               data={MyDataTableData}
-              className="h-8/10 overflow-y-auto"
+              className="h-full"
             />
           </TabsContent>
           <TabsContent value="myFolders" className="h-full p-4">
