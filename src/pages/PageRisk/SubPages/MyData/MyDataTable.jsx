@@ -54,20 +54,23 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-// Memoized search input component to prevent unnecessary re-renders
-// Renders a search box with an icon and input field
-const SearchInput = memo(() => (
+// Modify SearchInput to accept and use the onSearch prop
+const SearchInput = memo(({ onSearch }) => (
   <div className="flex items-center gap-2 border-2 bg-secondary px-2 rounded-md max-w-[20rem] w-full h-8">
     <Search className="w-6 h-4 text-primary-foreground" />
     <input
       type="text"
       placeholder="Search anything..."
+      onChange={(e) => onSearch(e.target.value)}
       className="bg-transparent border-none outline-none caret-primary-foreground w-full h-full text-sm"
     />
   </div>
 ));
 
 SearchInput.displayName = "SearchInput";
+SearchInput.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+};
 
 // Memoized table row component for performance optimization
 // Renders a single row with its cells based on the provided row data
@@ -110,6 +113,8 @@ export function MyDataTable({ columns, data }) {
   // State for sorting and filtering
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
+  // Add globalFilter state
+  const [globalFilter, setGlobalFilter] = useState("");
 
   // Memoize table configuration to prevent unnecessary recalculations
   const tableConfig = useMemo(
@@ -126,9 +131,11 @@ export function MyDataTable({ columns, data }) {
       state: {
         sorting,
         columnFilters,
+        globalFilter,
       },
+      onGlobalFilterChange: setGlobalFilter,
     }),
-    [data, columns, sorting, columnFilters]
+    [data, columns, sorting, columnFilters, globalFilter]
   );
 
   // Create table instance
@@ -137,7 +144,7 @@ export function MyDataTable({ columns, data }) {
   return (
     <div className="flex flex-col items-between justify-center gap-2">
       <div className="flex items-center justify-start gap-2">
-        <SearchInput />
+        <SearchInput onSearch={setGlobalFilter} />
         <FilterButtons />
       </div>
       <div className="rounded-md border flex flex-col h-[calc(100vh-12rem)]">
