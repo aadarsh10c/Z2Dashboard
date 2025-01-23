@@ -54,6 +54,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+// Memoized search input component to prevent unnecessary re-renders
+// Renders a search box with an icon and input field
 const SearchInput = memo(() => (
   <div className="flex items-center gap-2 border-2 bg-secondary px-2 rounded-md max-w-[20rem] w-full h-8">
     <Search className="w-6 h-4 text-primary-foreground" />
@@ -67,6 +69,8 @@ const SearchInput = memo(() => (
 
 SearchInput.displayName = "SearchInput";
 
+// Memoized table row component for performance optimization
+// Renders a single row with its cells based on the provided row data
 const TableRowMemo = memo(({ row }) => (
   <TableRow data-state={row.getIsSelected() && "selected"}>
     {row.getVisibleCells().map((cell) => (
@@ -82,6 +86,8 @@ TableRowMemo.propTypes = {
   row: PropTypes.object.isRequired,
 };
 
+// Memoized filter buttons component
+// Renders a list of filter buttons with icons for filtering table data
 const FilterButtons = memo(() => (
   <>
     {[
@@ -99,11 +105,13 @@ const FilterButtons = memo(() => (
 
 FilterButtons.displayName = "FilterButtons";
 
+// Main table component that handles data display, sorting, filtering, and pagination
 export function MyDataTable({ columns, data }) {
+  // State for sorting and filtering
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
 
-  // Memoize the table configuration options
+  // Memoize table configuration to prevent unnecessary recalculations
   const tableConfig = useMemo(
     () => ({
       data,
