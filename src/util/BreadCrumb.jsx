@@ -8,6 +8,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import React from "react";
 
 /**
  * Renders a breadcrumb navigation component with custom separator
@@ -23,7 +24,7 @@ export function BreadcrumbWithCustomSeparator({ crumbList }) {
           const formattedCrumb = formatCrumb(crumb);
 
           return (
-            <div key={index}>
+            <React.Fragment key={index}>
               <BreadcrumbItem>
                 {isLastItem ? (
                   <BreadcrumbPage>{formattedCrumb}</BreadcrumbPage>
@@ -38,7 +39,7 @@ export function BreadcrumbWithCustomSeparator({ crumbList }) {
                   <Slash size={1} />
                 </BreadcrumbSeparator>
               )}
-            </div>
+            </React.Fragment>
           );
         })}
       </BreadcrumbList>
