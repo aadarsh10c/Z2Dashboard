@@ -17,18 +17,18 @@ export const columns = [
     id: "select",
     header: ({ table }) => (
       <Checkbox
-        // className="h-4 w-4"
-        size={10}
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
+        size={8}
+        className="data-[state=checked]:bg-secondary-foreground"
+        checked={table.getIsAllPageRowsSelected()}
+        indeterminate={table.getIsSomePageRowsSelected()}
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"
       />
     ),
     cell: ({ row }) => (
       <Checkbox
+        size={8}
+        className="data-[state=checked]:bg-secondary-foreground"
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
         aria-label="Select row"
@@ -39,37 +39,33 @@ export const columns = [
   },
   {
     accessorKey: "name",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Name
-          <ChevronsUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
-    cell: ({ row }) => {
-      const name = row.getValue("name");
-      return (
-        <div className="inline-flex items-center gap-2 text-sm">
-          <FolderClosed size={14} />
-          {name}
-        </div>
-      );
-    },
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+      >
+        Name
+        <ChevronsUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+    cell: ({ row }) => (
+      <div className="inline-flex items-center gap-2 text-sm">
+        <FolderClosed size={14} />
+        {row.getValue("name")}
+      </div>
+    ),
   },
   {
     accessorKey: "createdBy",
     header: "Created By",
     cell: ({ row }) => {
       const createdBy = row.getValue("createdBy");
-      const fb = createdBy[0].toUpperCase();
+      const avatarInitial = createdBy[0].toUpperCase();
+
       return (
         <div className="inline-flex items-center gap-2 text-sm">
           <Avatar className="h-6 w-6">
-            <AvatarFallback className="text-xs">{fb}</AvatarFallback>
+            <AvatarFallback className="text-xs">{avatarInitial}</AvatarFallback>
           </Avatar>
           {createdBy}
         </div>
@@ -85,26 +81,24 @@ export const columns = [
     header: "Modified",
   },
   {
-    accessorKey: "...",
+    accessorKey: "actions",
     header: () => <MoreHorizontal className="h-4 w-4" />,
-    cell: () => {
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem>Action 1</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Action 2</DropdownMenuItem>
-            <DropdownMenuItem>Action 3</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      );
-    },
+    cell: () => (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className="h-8 w-8 p-0">
+            <span className="sr-only">Open menu</span>
+            <MoreHorizontal className="h-4 w-4" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuLabel>Actions</DropdownMenuLabel>
+          <DropdownMenuItem>Action 1</DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>Action 2</DropdownMenuItem>
+          <DropdownMenuItem>Action 3</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    ),
   },
 ];

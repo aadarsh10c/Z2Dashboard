@@ -3,10 +3,10 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
-import {Z2Logo} from "@/assets/z2_logo.jpg";
+import Z2Logo from "@/assets/z2_logo.jpg";
 /**
  * MainSidebarHeader Component
- * 
+ *
  * This component provides a header for the main sidebar, including a logo and a toggle button.
  * It also handles the sidebar state and provides a function to toggle the sidebar.
  */
